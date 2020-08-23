@@ -27,3 +27,5 @@ felllqfeoe
 $ echo -e "hello there" | tr -c 'el\n' '\0-\377' | xxd
 00000000: 6665 6c6c 6c1f 7166 656f 650a            felll.qfeoe.
 The translation table is just all characters in order (ascii value 0 to 255). You can see that the space was translated to 31,3 the ‘h’ was translated to ‘f’, which is two indexes behind, as there are now two holes in the input list, and ‘r’ mapped to ‘o’, which is 3 indexes behind, since the index of ‘r’ is after all three characters that we’re leaving out.
+
+Note: This is a group project for Intro to Computer Science. The testing was done by our professor 
